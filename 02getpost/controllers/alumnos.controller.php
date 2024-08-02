@@ -1,7 +1,7 @@
 <?php
 error_reporting(0);
 require_once("../models/alumnos.models.php");
-$alumnos = new $alumnos();
+$alumnos = new Alumnos();
 
 switch ($_GET["op"]) {
     case "todos":
