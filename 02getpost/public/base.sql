@@ -1,48 +1,40 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.2
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost:3306
--- Tiempo de generación: 01-08-2024 a las 23:52:44
--- Versión del servidor: 5.7.24
--- Versión de PHP: 8.2.14
-SET
-    SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 02-08-2024 a las 05:43:16
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
 
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
-
-SET
-    time_zone = "+00:00";
+SET time_zone = "+00:00";
 
 --
 -- Base de datos: `sexto`
 --
+
 -- --------------------------------------------------------
+
 --
 -- Estructura de tabla para la tabla `alumnos`
 --
-CREATE TABLE
-    `alumnos` (
-        `IdAlumno` int (11) NOT NULL,
-        `Nombre` text NOT NULL,
-        `Apellido` text NOT NULL,
-        `Edad` int (11) NOT NULL
-    ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
+
+CREATE TABLE `alumnos` (
+  `id_alumno` int(11) NOT NULL,
+  `Nombre` text NOT NULL,
+  `Apellido` text NOT NULL,
+  `Edad` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Índices para tablas volcadas
 --
+
 --
 -- Indices de la tabla `alumnos`
 --
-ALTER TABLE `alumnos` ADD PRIMARY KEY (`IdAlumno`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
---
--- AUTO_INCREMENT de la tabla `alumnos`
---
-ALTER TABLE `alumnos` MODIFY `IdAlumno` int (11) NOT NULL AUTO_INCREMENT;
-
+ALTER TABLE `alumnos`
+  ADD PRIMARY KEY (`id_alumno`);
 COMMIT;
