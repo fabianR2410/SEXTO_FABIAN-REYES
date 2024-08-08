@@ -3,23 +3,23 @@
 require_once ('../models/cliente.model.php');    
 
 //error_reporting(0);
-$cliente = new  $Clientes();
+$cliente = new  Clientes ;
 
 switch ($_GET["op"]) {
 
     case 'todos':
-        $datos = array(); //seteo respuesta
+        $dat = array(); //seteo respuesta
         $datos = $cliente->todos();
-        while ($row = mysqli_fetch_assoc($dat)) {
+        while ($row = mysqli_fetch_assoc($datos)) {
             $todos[] = $row;
         }
         echo json_encode($todos);
         break;
 
     case 'uno':
-        $idcliente = $_POST["idcliente"];
+        $Idcliente = $_POST["Idcliente"];
         $datos = array(); //seteo respuesta
-        $datos = $cliente->uno($idcliente);
+        $datos = $clientes->uno($idcliente);
         $res = mysqli_fetch_assoc($datos);
         echo json_encode($res);
         break;
@@ -31,7 +31,7 @@ switch ($_GET["op"]) {
         $telefono = $_POST["telefono"];
         $direccion = $_POST["direccion"];
         $datos = array(); //seteo respuesta
-        $datos = $cliente->insertar($nombre, $apellido, $correo, $telefono, $direccion);
+        $datos = $clientes->insertar($nombre, $apellido, $correo, $telefono, $direccion);
         echo json_encode($dat);
         break;
 
