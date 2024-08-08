@@ -1,6 +1,7 @@
 <?php
 // controlador de clientes
 require_once 'models/cliente.model.php';
+
 //error_reporting(0);
 $cliente = new $cliente();
 
