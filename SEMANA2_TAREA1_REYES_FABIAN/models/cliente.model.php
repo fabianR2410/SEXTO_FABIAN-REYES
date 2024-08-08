@@ -1,5 +1,5 @@
 <?php
-require_once   ('C:\xampp\htdocs\SEXTO\SEMANA2_TAREA1_REYES_FABIAN\config/stat.php') ;
+require_once   ('stat.php') ;
 class Clientes
 {
 
