@@ -1,9 +1,9 @@
 <?php
 // controlador de clientes
-require_once 'models/cliente.model.php';
+require_once 'C:\xampp\htdocs\SEXTO\SEMANA2_TAREA1_REYES_FABIAN\models';    
 
 //error_reporting(0);
-$cliente = new $cliente();
+$cliente = new  $Clientes();
 
 switch ($_GET["op"]) {
 
