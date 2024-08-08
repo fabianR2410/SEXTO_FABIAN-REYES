@@ -70,22 +70,22 @@ ENGINE = InnoDB;
 -- Table `debersemana02`.`Detalles`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `debersemana02`.`Detalles` (
-  `idDetalle` INT NULL,
-  `idPedido` INT NOT NULL,
-  `idProductos` INT NOT NULL,
-  `Cantidad` INT NOT NULL,
-  `PrecioUnitario` DECIMAL(10,2) NOT NULL,
-  `Pedido_idPedido` INT NOT NULL,
-  `Productos_idProductos` INT NOT NULL,
-  PRIMARY KEY (`idDetalle`),
-  INDEX `fk_DetallePedido_Pedido1_idx` (`Pedido_idPedido` ASC) ,
-  INDEX `fk_DetallePedido_Productos1_idx` (`Productos_idProductos` ASC) ,
-  CONSTRAINT `fk_DetallePedido_Pedido1`
+    `idDetalle` INT NULL,
+    `idPedido` INT NOT NULL,
+    `idProductos` INT NOT NULL,
+    `Cantidad` INT NOT NULL,
+    `PrecioUnitario` DECIMAL(10,2) NOT NULL,
+    `Pedido_idPedido` INT NOT NULL,
+    `Productos_idProductos` INT NOT NULL,
+    PRIMARY KEY (`idDetalle`),
+    INDEX `fk_DetallePedido_Pedido1_idx` (`Pedido_idPedido` ASC) ,
+    INDEX `fk_DetallePedido_Productos1_idx` (`Productos_idProductos` ASC) ,
+    CONSTRAINT `fk_DetallePedido_Pedido1`
     FOREIGN KEY (`Pedido_idPedido`)
     REFERENCES `debersemana02`.`Pedido` (`idPedido`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_DetallePedido_Productos1`
+    CONSTRAINT `fk_DetallePedido_Productos1`
     FOREIGN KEY (`Productos_idProductos`)
     REFERENCES `debersemana02`.`Productos` (`idProductos`)
     ON DELETE NO ACTION
