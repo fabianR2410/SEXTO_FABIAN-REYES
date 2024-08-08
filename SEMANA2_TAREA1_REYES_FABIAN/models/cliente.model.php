@@ -3,7 +3,7 @@ require_once('../config/stat.php');
 class Clientes
 {
 
-
+// funsion conectar
 public function todos() //select * from clientes
     {
         $con = new ClaseConectar();
