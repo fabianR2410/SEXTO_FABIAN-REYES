@@ -1,14 +1,14 @@
 <?php
 // controlador de clientes
-require_once ('../models/cliente.model.php');    
+require_once '../models/cliente.model.php' ;
 
 //error_reporting(0);
 $cliente = new  Clientes ;
 
 switch ($_GET["op"]) {
-
+//TODO: operaciones de clientes
     case 'todos':
-        $dat = array(); //seteo respuesta
+        $datos = array(); //seteo respuesta
         $datos = $cliente->todos();
         while ($row = mysqli_fetch_assoc($datos)) {
             $todos[] = $row;
