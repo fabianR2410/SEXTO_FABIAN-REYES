@@ -56,6 +56,25 @@ public function todos() //select * from clientes
     } finally {
         $con->close();
     }
+    }
+    //funsion eliminar
+    public function eliminar($Idcliente)
+    {
+        try {
+        //codigo para eliminar
+        $con = new ClaseConectar();
+        $con = $con->ProcedimientoParaConectar();
+        $cadena = "DELETE FROM clientes WHERE Idcliente = $Idcliente";
+        if (mysqli_query($con, $cadena)) {
+            return $Idcliente;
+        } else {
+            return $con->error;
+        }
+    } catch (Exception $th) {
+        return $th->getMessage();
+    } finally {
+        $con->close();
+    }
     
     }
 }
