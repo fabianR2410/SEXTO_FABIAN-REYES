@@ -1,5 +1,5 @@
 <?php
-require_once('../config/stat.php');             
+require_once ('../config/stat.php');             
 class Clientes
 {
 

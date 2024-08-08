@@ -1,6 +1,6 @@
 <?php
 // controlador de clientes
-require_once 'C:\xampp\htdocs\SEXTO\SEMANA2_TAREA1_REYES_FABIAN\models';    
+require_once ('../models/cliente.model.php');    
 
 //error_reporting(0);
 $cliente = new  $Clientes();
