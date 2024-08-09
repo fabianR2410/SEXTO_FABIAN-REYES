@@ -3,7 +3,7 @@
 require_once '../models/cliente.model.php' ;
 
 //error_reporting(0);
-$cliente = new  Clientes ;
+$cliente = new  Cliente ;
 
 switch ($_GET["op"]) {
 //TODO: operaciones de clientes
