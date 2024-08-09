@@ -7,17 +7,17 @@ class Producto
     public function todos()
     {
    $con = new ClaseConectar();
-   $con = $con->ProcedimientoConectar();
+   $con = $con->ProcedimientoParaConectar();
    $cadena = "SELECT * FROM producto";
-   $datos = mysqli_query($con, $cadena);
+   $data = mysqli_query($con, $cadena);
    return $data;
     }
-    public function uno($idProducto)
+    public function uno($IDProducto)
     {
         $con = new ClaseConectar();
-        $con = $con->ProcedimientoConectar();
-        $cadena = "SELECT * FROM producto WHERE idProducto=$idProducto";
-        $datos = mysqli_query($con, $cadena);
+        $con = $con->ProcedimientoParaConectar();
+        $cadena = "SELECT * FROM producto WHERE IDProducto=$IDProducto";
+        $data = mysqli_query($con, $cadena);
         return $data;
     }
     //FUNSION INSERTAR
@@ -25,27 +25,27 @@ class Producto
     {
         try {
         $con = new ClaseConectar();
-        $con = $con->ProcedimientoConectar();
+        $con = $con->ProcedimientoParaConectar();
         $cadena = "INSERT INTO productos (`IDProducto`, `NombreProducto`, `Descripcion`, `Precio`, `StockInicial`, `IDCategorias`) VALUES ($NombreProducto, $Descripcion, $Precio, $StockInicial, $IDCategorias)";
     if (mysqli_query($con, $cadena)) {
         return $con ->insert_id;
         } else {
        return $con -> error;
         }
-        } catch (Throwable $th) {
+        } catch (Exception $th) {
             return $th->getMessage();
         } finally {
             $con->close();
         }
     }
     //FUNSION ACTUALIZAR
-    public function actualizar($idProducto, $NombreProducto, $Descripcion, $Precio, $StockInicial, $IDCategorias)
+    public function actualizar($IDProducto, $NombreProducto, $Descripcion, $Precio, $StockInicial, $IDCategorias)
     {
             try {
                 //codigo actualizar
         $con = new ClaseConectar();
-        $con = $con->ProcedimientoConectar();
-        $cadena = "UPDATE producto SET NombreProducto='$NombreProducto', Descripcion='$Descripcion', Precio=$Precio, StockInicial=$StockInicial, IDCategorias=$IDCategorias WHERE idProducto=$idProducto";
+        $con = $con->ProcedimientoParaConectar();
+        $cadena = "UPDATE producto SET NombreProducto='$NombreProducto', Descripcion='$Descripcion', Precio=$Precio, StockInicial=$StockInicial, IDCategorias=$IDCategorias WHERE IDProducto=$IDProducto";
     if (mysqli_query($con, $cadena)) {
         return $IDProducto;
         } else {
@@ -58,15 +58,15 @@ class Producto
     } 
     }
     //FUNSION ELIMINAR
-    public function eliminar($idProducto)
+    public function eliminar($IDProducto)
     {
         try {
             //codigo eliminar
         $con = new ClaseConectar();
-        $con = $con->ProcedimientoConectar();
-        $cadena = "DELETE FROM producto WHERE idProducto=$idProducto";
+        $con = $con->ProcedimientoParaConectar();
+        $cadena = "DELETE FROM producto WHERE IDProducto=$IDProducto";
     if (mysqli_query($con, $cadena)) {
-        return $idProducto;
+        return $IDProducto;
         } else {
             return $con->error;
         }
