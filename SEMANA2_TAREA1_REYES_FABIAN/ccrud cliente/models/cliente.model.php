@@ -1,6 +1,6 @@
 <?php
-require_once ('../config/stat.php');             
-class Clientes
+require_once '../config/stat.php';             
+class Cliente
 {
 
 // funsion conectar
