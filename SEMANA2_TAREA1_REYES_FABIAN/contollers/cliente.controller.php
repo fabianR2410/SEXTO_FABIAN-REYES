@@ -19,7 +19,7 @@ switch ($_GET["op"]) {
     case 'uno':
         $Idcliente = $_POST["Idcliente"];
         $datos = array(); //seteo respuesta
-        $datos = $clientes->uno($idcliente);
+        $datos = $cliente->uno($idcliente);
         $res = mysqli_fetch_assoc($datos);
         echo json_encode($res);
         break;
@@ -31,7 +31,7 @@ switch ($_GET["op"]) {
         $telefono = $_POST["telefono"];
         $direccion = $_POST["direccion"];
         $datos = array(); //seteo respuesta
-        $datos = $clientes->insertar($nombre, $apellido, $correo, $telefono, $direccion);
+        $datos = $cliente->insertar($Idcliente, $nombre, $apellido, $correo, $telefono, $direccion);
         echo json_encode($dat);
         break;
 
