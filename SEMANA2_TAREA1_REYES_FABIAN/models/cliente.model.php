@@ -26,7 +26,7 @@ public function todos() //select * from clientes
         try {
             $con = new ClaseConectar();
             $con = $con->ProcedimientoParaConectar();
-            $cadena = "INSERT INTO  clientes (Idcliente, Nombre, Apellido, Correo, Telefono, Direccion) VALUES ($Idcliente, '$Nombre', '$Apellido', '$Correo', '$Telefono', '$Direccion')";
+            $cadena = "INSERT INTO  clientes (Idcliente, Nombre, Apellido, Correo, Telefono, Direccion) VALUES ($Idcliente, $Nombre, $Apellido, $Correo, $Telefono, $Direccion)";
             if (mysqli_query($con, $cadena)) {
                 return $con->insert_id;
             } else {
