@@ -1,6 +1,6 @@
 <?php
 //controlador de producto
-require_once 'model/producto.php';
+require_once '../models/producto.model.php';
 //error reporting
 $producto = new Producto();
 
