@@ -1,0 +1,5 @@
+instalacion
+nodejs
+angular
+pnpm
+direcionar la ruta donde se cree el proyecto
