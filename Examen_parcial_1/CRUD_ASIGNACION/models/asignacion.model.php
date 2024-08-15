@@ -1,14 +1,14 @@
 <?php
 require_once '../config/inias.php';
 
-class Asignacion
+class Asignaciones
 {
     //funsion conectar
-    public function todos()
+    public function todosss()
     {
         $conect = new ClaseConectar();
         $conect = $conect->procedimientoparaconectar();
-        $cadena = "SELECT * FROM asignacion";
+        $cadena = "SELECT * FROM Asignaciones";
         $dax = mysqli_query($conect, $cadena);
         return $dax;
     }
@@ -16,7 +16,7 @@ class Asignacion
     {
         $conect = new ClaseConectar();
         $conect = $conect->procedimientoparaconectar();
-        $cadena = "SELECT * FROM asignacion WHERE idAsignacion=$idAsignacion";
+        $cadena = "SELECT * FROM Asignaciones WHERE idAsignacion=$idAsignacion";
         $dax = mysqli_query($conect, $cadena);
         return $dax;
     }
@@ -27,7 +27,7 @@ class Asignacion
             //codigo insertar
             $conect = new ClaseConectar();
             $conect = $conect->procedimientoparaconectar();
-            $cadena = "INSERT INTO  asignacion (idAsignacion, idEmplados, idDepartamentos, Fecha_asignacion) VALUES ('$idAsignacion', '$idEmplados', '$idDepartamentos', '$Fecha_asignacion')";
+            $cadena = "INSERT INTO  Asignaciones (idAsignacion, idEmplados, idDepartamentos, Fecha_asignacion) VALUES ('$idAsignacion', '$idEmplados', '$idDepartamentos', '$Fecha_asignacion')";
          if (mysqli_query($conect, $cadena)) {
             return $conect->insert_id;
         } else {
@@ -48,7 +48,7 @@ class Asignacion
                    //codigo para actualizar
                $conect = new ClaseConectar();
                $conect = $conect->procedimientoparaconectar();
-               $cadena = "UPDATE  asignacion SET idEmplados='$idEmplados', idDepartamentos='$idDepartamentos', Fecha_asignacion='$Fecha_asignacion' WHERE idAsignacion=$idAsignacion";
+               $cadena = "UPDATE  Asignaciones SET idEmplados='$idEmplados', idDepartamentos='$idDepartamentos', Fecha_asignacion='$Fecha_asignacion' WHERE idAsignacion=$idAsignacion";
                if (mysqli_query($conect, $cadena)) {
                    return $idAsignacion;
                } else {
@@ -68,7 +68,7 @@ class Asignacion
                        //codigo para eliminar
                        $conect = new ClaseConectar();
                        $conect = $conect->procedimientoparaconectar();
-                       $cadena = "DELETE FROM asignacion WHERE idAsignacion=($idAsignacion)";
+                       $cadena = "DELETE FROM Asignaciones WHERE idAsignacion=($idAsignacion)";
                        if (mysqli_query($conect, $cadena)) {
                            return $idAsignacion;
                        } else {

@@ -2,12 +2,12 @@
 //controlador de departamentos
 require_once '../models/asignacion.model.php' ;
 // reporte de error
-$asignacion= new Asignacion ;
+$asignacion= new Asignaciones ;
 
 switch ($_GET["op"]) {
     case 'todosss':
         $dax = array();
-        $dax = $asignacion->todos();
+        $dax = $Asignaciones->todosss();
         while ($row = mysqli_fetch_assoc($dax)) {
             $todosss[] = $row;
         }
@@ -27,7 +27,7 @@ switch ($_GET["op"]) {
         $idDepartamentos = $_POST["idDepartamentos"];
         $FechaAsignacion = $_POST["FechaAsignacion"];
         $dax = array();
-        $dax = $empleado->insertar($idDepartamentos,$Nombre_Departamento, $Ubicacion, $Jefe_Departamento, $Extension);
+        $dax = $asignacion->insertar($idAsignacion,$idDepartamentos,$idEmpleados,$FechaAsignacion);
         echo json_encode($dax);
         break;
     case 'actualizar':
