@@ -7,6 +7,7 @@ class ClaseConectar
     private $pass = "";
     private $base = "examenp1";
     public function ProcedimientoParaConectar()
+    
     {
         $this->conexion = mysqli_connect($this->host, $this->usuario, $this->pass, $this->base);
         mysqli_query($this->conexion, "SET NAMES 'utf8'");
