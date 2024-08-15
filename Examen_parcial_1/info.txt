@@ -1,1 +1,8 @@
-ESTE ES CRUD PARA UN SISTEMA DE GESTION DE EMPLADOS
+CRUD PARA UN SISTEMA DE GESTION DE EMPLADOS
+EJECICIO NUMERO 10 PLANTEADO EN LOS PROBLEMAS DE EXAMEN
+10. Sistema de Gestión de Empleados: 
+Diseña una base de datos para gestionar departamentos y empleados, incluyendo asignaciones. 
+Tablas: `Departamentos` 
+(departamento_id, nombre, ubicacion, jefe_departamento, extension), 
+`Empleados` 
+(empleado_id, nombre, apellido, email, telefono).
