@@ -17,7 +17,7 @@ var init = () => {
       $.each(Departamentos, (index, Departamentos) => {
         html += `<tr>
                   <td>${index + 1}</td>
-                  <td>${Departamentos.Nombre_depeartamentos}</td>
+                  <td>${Departamentos.Nombre_departamentos}</td>
                   <td>${Departamentos.Ubicacion}</td>
                   <td>${Departamentos.Jefe_departamento}</td>
                   <td>${Departamentos.Extencion}</td>
