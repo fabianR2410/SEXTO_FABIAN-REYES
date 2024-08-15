@@ -1,6 +1,6 @@
 <?php
 require_once '../config/ini.php';
-class Empleados
+class Emplados
 {
     //funsion conectar
     public function todos()

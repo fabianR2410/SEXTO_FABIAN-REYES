@@ -2,7 +2,7 @@
 //controlador de emplaeados
 require_once '../models/empleados.model.php' ;
 // reporte de error
-$empleado= new Empleados ;
+$empleado= new Emplados ;
 
 switch ($_GET["op"]) {
     case 'todos':
