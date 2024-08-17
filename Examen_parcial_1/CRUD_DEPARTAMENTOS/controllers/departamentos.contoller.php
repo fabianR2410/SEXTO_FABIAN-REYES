@@ -5,7 +5,7 @@ require_once '../models/departamentos.model.php' ;
 $departamentos= new Departamentos ;
 
 switch ($_GET["op"]) {
-    case 'todoss':
+    case 'todos':
         $dato = array();
         $dato = $departamentos->todos();
         while ($row = mysqli_fetch_assoc($dato)) {
