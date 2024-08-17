@@ -4,7 +4,7 @@ require_once '../config/inias.php';
 class Asignaciones
 {
     //funsion conectar
-    public function todosss()
+    public function todos()
     {
         $conect = new ClaseConectar();
         $conect = $conect->procedimientoparaconectar();

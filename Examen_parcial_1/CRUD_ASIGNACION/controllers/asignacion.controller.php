@@ -5,9 +5,9 @@ require_once '../models/asignacion.model.php' ;
 $asignacion= new Asignaciones ;
 
 switch ($_GET["op"]) {
-    case 'todosss':
+    case 'todos':
         $dax = array();
-        $dax = $Asignaciones->todosss();
+        $dax = $Asignaciones->todos();
         while ($row = mysqli_fetch_assoc($dax)) {
             $todosss[] = $row;
         }
