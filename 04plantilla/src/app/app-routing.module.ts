@@ -1,4 +1,3 @@
-// angular import
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -8,7 +7,7 @@ import { GuestComponent } from './theme/layouts/guest/guest.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: '', //url
     component: AdminComponent,
     children: [
       {
@@ -31,6 +30,18 @@ const routes: Routes = [
       {
         path: 'sample-page',
         loadComponent: () => import('./demo/other/sample-page/sample-page.component')
+      },
+      {
+        path: 'clientes',
+        loadComponent: () => import('./clientes/clientes.component').then((m) => m.ClientesComponent)
+      },
+      {
+        path: 'nuevocliente',
+        loadComponent: () => import('./clientes/nuevocliente/nuevocliente.component').then((m) => m.NuevoclienteComponent)
+      },
+      {
+        path: 'editarcliente/:id',
+        loadComponent: () => import('./clientes/nuevocliente/nuevocliente.component').then((m) => m.NuevoclienteComponent)
       }
     ]
   },

@@ -5,8 +5,8 @@ class ClaseConectar
     protected $db;
     private $host = "localhost";
     private $usuario = "root";
-    private $pass = "";
-    private $base = "sexto";
+    private $pass = "root";
+    private $base = "mampsexto";
     public function ProcedimientoParaConectar()
     {
         $this->conexion = mysqli_connect($this->host, $this->usuario, $this->pass, $this->base);
